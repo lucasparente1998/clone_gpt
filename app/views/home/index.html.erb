@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/e3b0160650.js" crossorigin="anonymous"></script>
+  <title>ChatGpt</title>
+</head>
+
+<body>
+<div class="lateral">
+  <button type="button" class="myButton">
+    <i class="fa fa-plus"></i> New Chat
+  </button>
+</div>
+<div class="container">
+  <div class="title">
+    <h1>ChatGPT</h1>
+  </div>
+  <div class="app">
+    <div class="chat_container">
+      <div class="box">
+        <div class="box-img">
+          <img src="https://cdn-icons-png.flaticon.com/128/606/606795.png" alt="">
+          <p>Examples</p>
+        </div>
+        <button>"Explain quantum computing in simple terms" →</button>
+        <button>"Got any creative ideas for a 10 year old's birthday?" →</button>
+        <button>"How do I make an HTTP request in Javascript?" →</button>
+      </div>
+
+      <div class="box">
+        <div class="box-img">
+          <img src="https://static.thenounproject.com/png/1167484-200.png" alt="">
+          <p>Capabilities</p>
+        </div>
+        <button>Remembers what user said earlier in the conversation</button>
+        <button>Allows user to provide follow-up corrections</button>
+        <button>Trained to decline inappropriate requests</button>
+      </div>
+
+      <div class="box down">
+        <div class="box-img">
+          <img src="https://cdn-icons-png.flaticon.com/128/159/159469.png" alt="">
+          <p>Limitations</p>
+        </div>
+        <button>May occasionally generate incorrect information</button>
+        <button>May occasionally produce harmful instructions or biased content</button>
+        <button>Limited knowledge of world and events after 2021</button>
+      </div>
+    </div>
+    <form>
+      <textarea name="prompt" rows="1" cols="1" placeholder="Digite algo..."></textarea>
+      <button type="submit"><img src="https://cdn-icons-png.flaticon.com/128/9293/9293734.png" alt="enviar"></button>
+    </form>
+  </div>
+  <script type="module" src="script.js"></script>
+</div>
+
+
+
+</body>
+
+</html>
