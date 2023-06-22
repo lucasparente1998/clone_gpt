@@ -5,17 +5,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Arial";
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Arial";
+  font-family: "Arial", serif;
 }
 
 body {
   background: #343541;
   display: flex;
-  background: #343541;
   overflow-y:scroll;
   overflow-x: hidden;
 }
@@ -23,35 +19,53 @@ body {
 .lateral {
   width: 20%;
   min-height: 100vh;
-  background-color: #242424;
+  background-color: #202123;
   display: flex;
 }
 
-.container {
-  width: 80%;
-  width: 80%;
-  float: right;
+.login{
+  height: 5%;
+  position: absolute;
+  bottom: 0;
+}
+
+.entrar{
+  background-color: #242424;
+  color: #ffffff;
+  margin: 10px;
+  border: none;
+}
+
+.entrar:link{
+  text-decoration: none;
+}
+
+.entrar:hover {
+  background:linear-gradient(to bottom, #333333 5%, #333333 100%);
+}
+
+.entrar:active {
+  position:relative;
+  top:1px;
 }
 
 .myButton {
   width: 100%;
   height: 40px;
-  border-radius: 5px;
   outline: 1px solid #5a5959;
   margin: 10px;
-  text-align: center;
-  color: #fff;
+  display: flex;
   justify-content: center;
-  width: 250px;
-  height: 40px;
+  align-items: center;
+  color: #ffffff;
+  background-color: #242424;
   border-radius: 5px;
-  outline: 1px solid #5a5959;
-  margin: 10px;
-  text-align: center;
-  padding: auto;
-  color: #fff;
+  text-decoration: none;
 }
 
+.fa-plus{
+  padding: 5px;
+}
 .myButton:hover {
   background:linear-gradient(to bottom, #333333 5%, #333333 100%);
 }
@@ -59,6 +73,11 @@ body {
 .myButton:active {
   position:relative;
   top:1px;
+}
+
+.container {
+  width: 80%;
+  float: right;
 }
 
 .title {
@@ -199,20 +218,6 @@ body {
   display: none;
 }
 
-.my-form {
-  bottom: 10px;
-  width: 80%;
-  padding: 2px;
-  background: #40414F;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-top: 90px;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 35px 0px;
-  margin-bottom: 40px;
-}
-
 .my-img {
   width: 20px;
   height: 20px;
@@ -230,14 +235,27 @@ body {
   outline: none;
 }
 
-.my-button {
+.send {
   outline: 0;
   border: 0;
   cursor: pointer;
   background-color: transparent;
 }
 
+.my-form{
+  width: 70%;
+  position: absolute;
+  bottom: 10px;
+}
+
 .form-row {
   display: flex;
   align-items: center;
+  background-color: #40414F;
+  bottom: 10px;
+  padding: 2px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 10px 35px 0;
+  margin-bottom: 40px;
 }

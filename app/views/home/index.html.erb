@@ -12,9 +12,15 @@
 
 <body>
 <div class="lateral">
-  <button type="button" class="myButton">
-    <i class="fa fa-plus"></i> New Chat
-  </button>
+  <a href="/home/index" class="myButton">
+      <i class="fa fa-plus"></i> New Chat
+  </a>
+  <div class = "perguntas"></div>
+  <div class="login">
+    <a href="/users/sign_in" class="entrar">
+      <i class="fa fa-user"></i> Login
+    </a>
+  </div>
 </div>
 <div class="container">
   <div class="title">
@@ -52,10 +58,10 @@
         <button>Limited knowledge of world and events after 2021</button>
       </div>
     </div>
-    <%= form_tag home_index_path, html: { class: "my-form" }, method: :post do %>
+    <%= form_tag home_index_path, class: "my-form" , method: :post do %>
       <div class="form-row">
         <%= text_field_tag :question, nil, class: "my-textarea", placeholder: "Digite sua pergunta" %>
-        <%= button_tag type: "submit", class: "my-button" do %>
+        <%= button_tag type: "submit", class: "send" do %>
           <%= image_tag "https://cdn-icons-png.flaticon.com/128/9293/9293734.png", alt: "Enviar", class: "my-img" %>
         <% end %>
       </div>
@@ -63,9 +69,6 @@
   </div>
   <script type="module" src="script.js"></script>
 </div>
-
-
-
 </body>
 
 </html>
