@@ -1,0 +1,9 @@
+<!-- app/views/questions/create.html.erb -->
+
+<h1>Pergunta:</h1>
+<p><%= @question %></p>
+
+<h1>Resposta:</h1>
+<% if @cat_image.present? %>
+  <img src="<%= @cat_image %>" alt="Cat Image">
+<% end %>
