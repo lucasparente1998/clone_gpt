@@ -7,6 +7,11 @@ gem 'devise'
 
 gem 'omniauth'
 
+gem 'bootstrap', '~> 5.2.2'
+
+gem 'jquery-rails'
+
+gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7'
 # Use pg as the database for Active Record
@@ -58,3 +63,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "importmap-rails", "~> 1.2"

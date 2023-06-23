@@ -1,5 +1,5 @@
 // Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 * {
@@ -75,12 +75,12 @@
   top:1px;
 }
 
-.container {
+.meucontainer {
   width: 80%;
   float: right;
 }
 
-.title {
+.titulo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,13 +89,13 @@
   margin-top: 20px;
 }
 
-.title h1 {
+.titulo h1 {
   align-items: center;
   color: #fff;
   font-size: 35px;
 }
 
-.app {
+.aplica {
   width: 100%;
   background-color: #343541;
   display: flex;
@@ -242,7 +242,7 @@
   background-color: transparent;
 }
 
-.my-form{
+.my-formulario{
   width: 70%;
   position: absolute;
   bottom: 10px;
