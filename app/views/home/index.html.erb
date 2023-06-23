@@ -10,7 +10,7 @@
   <title>ChatGpt</title>
 </head>
 
-<body>
+<body id="my-body">
 <div class="lateral">
   <a href="/home/index" class="myButton">
       <i class="fa fa-plus"></i> New Chat
@@ -20,6 +20,7 @@
     <a href="/users/sign_in" class="entrar">
       <i class="fa fa-user"></i> Login
     </a>
+    <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
   </div>
 </div>
 <div class="container">
