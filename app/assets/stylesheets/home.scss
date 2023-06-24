@@ -23,10 +23,11 @@
   display: flex;
 }
 
-.login{
+.logar{
   height: 5%;
   position: absolute;
   bottom: 0;
+  display: flex;
 }
 
 .entrar{
@@ -34,6 +35,9 @@
   color: #ffffff;
   margin: 10px;
   border: none;
+}
+
+.sair{
 }
 
 .entrar:link{
@@ -223,7 +227,7 @@
   height: 20px;
 }
 
-.my-textarea {
+.my-texto {
   resize: none;
   width: 100%;
   color: #fff;
@@ -235,20 +239,22 @@
   outline: none;
 }
 
-.send {
+.envia {
   outline: 0;
   border: 0;
   cursor: pointer;
   background-color: transparent;
-}
+  }
 
 .my-formulario{
   width: 70%;
+  height: 50px;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
+  align-content: center;
 }
 
-.form-row {
+.formulario-row {
   display: flex;
   align-items: center;
   background-color: #40414F;
@@ -258,4 +264,5 @@
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 10px 35px 0;
   margin-bottom: 40px;
+  height: 45px;
 }
