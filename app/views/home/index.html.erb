@@ -16,11 +16,11 @@
       <i class="fa fa-plus"></i> New Chat
   </a>
   <div class = "perguntas"></div>
-  <div class="login">
+  <div class="logar">
     <a href="/users/sign_in" class="entrar">
       <i class="fa fa-user"></i> Login
     </a>
-    <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+    <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "sair"%>
   </div>
 </div>
 <div class="meucontainer">
@@ -60,9 +60,9 @@
       </div>
     </div>
     <%= form_tag home_index_path, class: "my-formulario" , method: :post do %>
-      <div class="form-row">
-        <%= text_field_tag :question, nil, class: "my-textarea", placeholder: "Digite sua pergunta" %>
-        <%= button_tag type: "submit", class: "send" do %>
+      <div class="formulario-row">
+        <%= text_field_tag :question, nil, class: "my-texto", placeholder: "Digite sua pergunta" %>
+        <%= button_tag type: "submit", class: "envia" do %>
           <%= image_tag "https://cdn-icons-png.flaticon.com/128/9293/9293734.png", alt: "Enviar", class: "my-img" %>
         <% end %>
       </div>
