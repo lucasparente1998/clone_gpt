@@ -17,6 +17,7 @@ class HomeController < ApplicationController
 
   def create
     @question = params[:question]
+    Registro.create(descricao: @question)
     @cat_image = CAT_IMAGES.sample
   end
 end
