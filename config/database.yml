@@ -26,7 +26,7 @@ development:
   database: clone_gpt
   host: localhost
   port: 5432
-  user: lucasparente
+  user: kelly
   password: 1234
 
   # The specified database role being used to connect to postgres.
@@ -64,7 +64,7 @@ test:
   database: clone_gpt
   host: localhost
   port: 5432
-  user: lucasparente
+  user: kelly
   password: 1234
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -90,5 +90,5 @@ test:
 production:
   <<: *default
   database: clone_gpt
-  username: lucasparente
+  username: kelly
   password: <%= ENV['CLONE_GPT_DATABASE_PASSWORD'] %>

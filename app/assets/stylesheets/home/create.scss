@@ -1,0 +1,70 @@
+.chat_area {
+  float: left;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+.chat_area li {
+  padding: 14px 14px 0;
+}
+.chat_area li .chat-img1 img {
+  height: 40px;
+  width: 40px;
+}
+.chat_area .chat-body1 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.chat-body1 p {
+  background: #40414F none repeat scroll 0 0;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+.chat_area .admin_chat .chat-body1 {
+  float: right;
+}
+.chat_area li:last-child {
+  padding-bottom: 10px;
+}
+.message_write {
+  background: #40414F none repeat scroll 0 0;
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+
+.message_write textarea.form-control {
+  height: 70px;
+  padding: 10px;
+}
+.chat_bottom {
+  float: left;
+  margin-top: 13px;
+  width: 100%;
+}
+.upload_btn {
+  color: #777777;
+}
+.sub_menu_ > li a, .sub_menu_ > li {
+  float: left;
+  width:100%;
+}
+.member_list li:hover {
+  background: #428bca none repeat scroll 0 0;
+  color: #fff;
+  cursor:pointer;
+}
+
+.my-formulario{
+  width: 70%;
+  height: 50px;
+  position: absolute;
+  bottom: 20px;
+  align-content: center;
+}
+
+img{
+  height: 300px;
+  width: 300px;
+}
