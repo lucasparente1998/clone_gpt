@@ -1,9 +1,63 @@
 <!-- app/views/questions/create.html.erb -->
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>Pergunta:</h1>
-<p><%= @question %></p>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/e3b0160650.js" crossorigin="anonymous"></script>
+  <title>ChatGpt</title>
+</head>
 
-<h1>Resposta:</h1>
-<% if @cat_image.present? %>
-  <img src="<%= @cat_image %>" alt="Cat Image">
+<body id="my-body">
+<div class="lateral">
+  <a href="/" class="myButton">
+    <i class="fa fa-plus"></i> New Chat
+  </a>
+  <div class = "perguntas"></div>
+  <div class="logar">
+    <a href="/users/sign_in" class="entrar">
+      <i class="fa fa-user"></i> Login
+    </a>
+    <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "sair"%>
+  </div>
+</div>
+<div class="meucontainer">
+  <div class="titulo">
+    <h1>ChatGPT</h1>
+  </div>
+  <div class="aplica">
+    <div class="chat_container">
+      <div><p><%= @question %></p></div>
+
+      <div><% if @cat_image.present? %>
+          <img src="<%= @cat_image %>" alt="Cat Image">
+        <% end %></div>
+
+    </div>
+    <%= form_tag home_index_path, class: "my-formulario" , method: :post do %>
+      <div class="formulario-row">
+        <%= text_field_tag :question, nil, class: "my-texto", placeholder: "Digite sua pergunta" %>
+        <%= button_tag type: "submit", class: "envia" do %>
+          <%= image_tag "https://cdn-icons-png.flaticon.com/128/9293/9293734.png", alt: "Enviar", class: "my-img" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <script type="module" src="script.js"></script>
+</div>
+<h1>Hello, Rails!</h1>
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "sair"%>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
+</body>
+
+</html>
+
