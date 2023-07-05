@@ -11,9 +11,11 @@ gem 'bootstrap', '~> 5.2.2'
 
 gem 'jquery-rails'
 
+gem 'mailcatcher'
+
 gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.7'
+gem 'rails', '~> 7.0.2'
 # Use pg as the database for Active Record
 gem 'pg', '~> 1.5', '>= 1.5.3'
 # Use Puma as the app server
