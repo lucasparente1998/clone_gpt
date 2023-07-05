@@ -20,6 +20,5 @@ class HomeController < ApplicationController
     @cat_image = CAT_IMAGES.sample
     Registro.create(descricao: @question, email_cliente: current_user.email, response: @cat_image)
     @chats = Registro.por_email(current_user.email)
-    byebug
   end
 end
