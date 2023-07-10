@@ -26,7 +26,7 @@
     <i class="fa fa-plus"></i> New Chat
   </a>
   <% @chats.each do |chat| %>
-    <a><%= link_to chat.descricao, home_show_path(chat), method: :get, class: "myButton"%></a>
+    <a><%= link_to chat.descricao, home_show_path(chat), method: :show, class: "myButton"%></a>
   <% end %>
   <div class = "perguntas"></div>
   <div class="logar">
@@ -47,20 +47,35 @@
       <ul class="list-unstyled">
         <li class="left clearfix">
           <div class="chat-body1 clearfix">
-            <div><p><%= @question %></p></div>
+            <div><p><%= @chat.descricao %></p></div>
           </div>
         </li>
         <li class="left clearfix admin_chat">
           <div class="chat-body1 clearfix">
-            <div><% if @cat_image.present? %>
-                <img src="<%= @cat_image %>" alt="Cat Image">
+            <div><% if @chat.response.present? %>
+                <img src="<%= @chat.response %>" alt="Cat Image">
               <% end %></div>
           </div>
         </li>
+        <% @mensagens.each do |mensagem| %>
+          <li class="left clearfix">
+            <div class="chat-body1 clearfix">
+              <div><p><%= mensagem.question %></p></div>
+            </div>
+          </li>
+          <li class="left clearfix admin_chat">
+            <div class="chat-body1 clearfix">
+              <div>
+                  <img src="<%= mensagem.response %>" alt="Cat Image">
+              </div>
+            </div>
+          </li>
+        <% end %>
+
       </ul>
     </div>
 
-    <%= form_tag home_index_path, class: "my-formulario" , method: :post do %>
+    <%= form_tag home_show_path(@chat), class: "my-formulario" , method: :get do %>
       <div class="formulario-row">
         <%= text_field_tag :question, nil, class: "my-texto", placeholder: "Digite sua pergunta" %>
         <%= button_tag type: "submit", class: "envia" do %>
@@ -74,4 +89,3 @@
 </body>
 
 </html>
-
