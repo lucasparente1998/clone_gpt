@@ -1,0 +1,26 @@
+<div class="lateral">
+  <a href="/" class="myButton">
+    <i class="fa fa-plus"></i> New Chat
+  </a>
+  <% if user_signed_in? %>
+    <% @chats.each do |chat| %>
+      <a><%= link_to chat.descricao, home_show_path(chat), method: :show, class: "perguntas"%></a>
+    <% end %>
+  <% end %>
+  <div class="logar">
+    <% if user_signed_in? %>
+      <div class="email_logado">
+        Logged in as:
+        <strong><%= current_user.email %></strong>
+      </div>
+      <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "sair"%>
+    <% else %>
+      <a href="/users/sign_up" class="entrar">
+        <i class="fa fa-user"></i> Sign up
+      </a>|
+      <a href="/users/sign_in" class="entrar">
+        <i class="fa fa-user"></i> Sign in
+      </a>
+    <% end %>
+  </div>
+</div>

@@ -5,37 +5,13 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/e3b0160650.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
   <title>ChatGpt</title>
 </head>
 
 <body id="my-body">
-<div class="lateral">
-  <a href="/" class="myButton">
-      <i class="fa fa-plus"></i> New Chat
-  </a>
-  <% if user_signed_in? %>
-    <% @chats.each do |chat| %>
-      <a><%= link_to chat.descricao, home_show_path(chat), method: :show, class: "myButton"%></a>
-    <% end %>
-  <% end %>
-  <div class = "perguntas"></div>
-  <div class="logar">
-
-    <% if user_signed_in? %>
-      <a style="color: white;">Logged in as <strong><%= current_user.email %></strong>.</a>
-      <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "sair"%>
-    <% else %>
-      <a href="/users/sign_up" class="entrar">
-        <i class="fa fa-user"></i> Sign in
-      </a>|
-      <a href="/users/sign_in" class="entrar">
-        <i class="fa fa-user"></i> Login
-      </a>
-    <% end %>
-  </div>
-</div>
+<%= render partial: 'home/lateral' %>
 <div class="meucontainer">
   <div class="titulo">
     <h1>ChatGPT</h1>
@@ -81,7 +57,6 @@
       </div>
     <% end %>
   </div>
-  <script type="module" src="script.js"></script>
 </div>
 </body>
 
